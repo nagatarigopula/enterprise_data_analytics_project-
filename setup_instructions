@@ -1,0 +1,20 @@
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Deploy Infrastructure:
+   ```bash
+   terraform apply
+   ```
+3. Run Airflow ETL:
+   ```bash
+   airflow dags trigger etl_pipeline
+   ```
+4. Train ML Model:
+   ```bash
+   python backend/ml_model.py
+   ```
+5. Deploy ML API:
+   ```bash
+   kubectl apply -f infrastructure/k8s_deployment.yaml
+   ```
